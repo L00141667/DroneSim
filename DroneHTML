@@ -1,0 +1,63 @@
+<html>
+
+
+
+<head>
+
+   <link href="custom_robot_window.css" rel="stylesheet" /> 
+  <script src="custom_robot_window.js"></script>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Drone Menu</h1>
+    
+    
+
+    <h2>Sensor</h2>
+    <progress id="distanceSensorProgressBar" value="0" max="1024"></progress>
+
+    
+    <h2>Menu</h2>
+    <label id="input-check"><input onchange="toggleStopCheckbox(this)" type="checkbox"><span>Stop Motors</span></label>
+    
+    
+   <script>
+  
+  function PropTest() 
+  {
+    console.log('Testing Propellors');
+  }
+  
+  function AltTest() 
+  {
+    console.log('Testing flight and altitude sensors');
+  }
+  
+  function TestLand() 
+  {
+    console.log('Testing Flight Landing');
+  }
+  
+  function FULL_FLIGHT() 
+  {
+    console.log('COMPLETE FLIGHT AND LANDING IS COMENCING');
+  }
+  
+   </script>
+   
+   <p> <center><button class="button button1" button onclick="PropTest()">Testing Propellors</button> </center></p>
+   
+   <p> <center><button class="button button1" button onclick="AltTest()">Test Flight</button> </center></p>
+
+   <p> <center><button class="button button1" button onclick="TestLand()">Test Landing</button> </center></p>
+
+   <p> <center><button class="button button1" button onclick="FULL_FLIGHT()">FULL FLIGHT & LANDING</button> </center></p>
+
+    <h2>Log Element</h2>
+    <ul id="console"></ul>
+
+  </div>
+</body>
+
+</html>
